@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Open Text Finder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand-icon" aria-hidden="true">⌕</div>
+      <div class="brand-copy">
+        <h1>Text Finder</h1>
+        <p>Search across your open tabs</p>
+      </div>
+      <span class="version">V1</span>
+    </header>
+
+    <form id="search-form">
+      <label class="field-label" for="query">Find text</label>
+      <div class="search-row">
+        <input id="query" type="search" placeholder="Type a word or phrase…" autocomplete="off" maxlength="250" required>
+        <button id="search-button" class="search-button" type="submit">Search</button>
+      </div>
+      <div class="options">
+        <label class="option"><input type="checkbox" id="case-sensitive"> <span>Match case</span></label>
+        <label class="option"><input type="checkbox" id="whole-word"> <span>Whole word</span></label>
+      </div>
+    </form>
+
+    <section class="results-area" aria-live="polite" aria-busy="false">
+      <div class="status-line">
+        <p id="status" class="status">Search the text on accessible tabs.</p>
+        <button type="button" id="clear-button" class="text-button hidden">Clear</button>
+      </div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <footer class="footer">
+      <span class="privacy-dot" aria-hidden="true"></span>
+      <span>Local search · No account or tracking</span>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

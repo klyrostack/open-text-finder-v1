@@ -14,17 +14,21 @@
 
 ## Install in Chrome
 
-1. Download `open-text-finder-v1.zip`.
-2. Extract the ZIP.
-3. Open `chrome://extensions`.
-4. Enable **Developer mode**.
-5. Click **Load unpacked**.
-6. Select the extracted folder that directly contains `manifest.json`.
-7. Pin **Open Text Finder** from Chrome's Extensions menu, then click its icon.
+## Install in Chrome
 
-**Important:** `manifest.json` must be directly inside the folder you select. Do not select a parent folder or the ZIP file.
+1. Open this repository on GitHub.
+2. Click the green **Code** button.
+3. Select **Download ZIP**.
+4. Once the ZIP has downloaded, extract it.
+5. Open Google Chrome and visit `chrome://extensions`.
+6. Enable **Developer mode**.
+7. Click **Load unpacked**.
+8. Select the extracted project folder that directly contains `manifest.json`.
+9. Pin Open Text Finder from Chrome's Extensions menu.
 
-For `file://` pages, open the extension's **Details** page and turn on **Allow access to file URLs**.
+**Important:** Select the folder containing `manifest.json` itself, not the ZIP file or a parent folder.
+
+For local `file://` pages, open the extension's **Details** page and enable **Allow access to file URLs**.
 
 ## Usage
 

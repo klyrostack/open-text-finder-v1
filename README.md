@@ -68,3 +68,19 @@ MIT. See [LICENSE](LICENSE).
 The `icons/` folder contains the extension icons in 16, 32, 48, and 128 pixel PNG sizes, plus the editable SVG source. The manifest uses these for the extension listing and toolbar action.
 
 To update an existing local installation, open `chrome://extensions` and click the circular **Reload** icon on Open Text Finder after replacing the old project files with these new files. To install as a separate copy, extract this ZIP and use **Load unpacked** on the extracted folder that directly contains `manifest.json`.
+
+
+## Contributing
+
+Contributions are welcome! If you find a bug, have an idea for a feature, or want to improve the documentation, feel free to contribute.
+
+1. Fork this repository.
+2. Clone your fork to your computer.
+3. Create a branch for your changes.
+4. Make your changes and test the extension in Chrome.
+5. Commit your changes and push the branch to your fork.
+6. Open a pull request against this repository and explain what you changed.
+
+Please keep pull requests focused and document any new permissions requested by the extension.
+
+By contributing, you agree that your contributions will be distributed under this project's MIT License.

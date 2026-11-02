@@ -29,6 +29,27 @@ input[type="search"]:focus { border-color: #d9f779; box-shadow: 0 0 0 2px #d9f72
 .search-button:hover { background: #e4ff90; }
 .search-button:disabled { opacity: .62; cursor: progress; }
 .options { display: flex; gap: 17px; margin-top: 11px; }
+.scope-row { display:flex; align-items:center; justify-content:space-between; margin-top:12px; }
+.scope-row select { max-width:170px; border:1px solid #393b45; border-radius:7px; background:#1b1d23; color:#c2c5ce; padding:5px 8px; font-size:11px; }
+.history-controls { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-top:9px; }
+.history-controls .text-button { padding:0; }
+.recent-searches { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+.recent-search { border:1px solid #393b45; border-radius:12px; background:#1b1d23; color:#c2c5ce; padding:4px 8px; font-size:10px; cursor:pointer; }
+.recent-search:hover { border-color:#d9f779; color:#d9f779; }
+.tab-picker { margin-top:8px; color:#b7bac4; font-size:11px; }
+.tab-picker summary { cursor:pointer; color:#d9f779; }
+.tab-choices { max-height:120px; overflow:auto; margin-top:6px; padding:5px 8px; border:1px solid #30333b; border-radius:7px; background:#17191e; }
+.tab-choice-actions { display:flex; gap:12px; padding-bottom:3px; }
+.tab-choice { display:flex; align-items:center; gap:6px; padding:4px 0; color:#c2c5ce; }
+.tab-choice input { accent-color:#d9f779; margin:0; }
+.result-wrap { margin-bottom:7px; }
+.result-wrap .result { margin:0; }
+.match-navigation { display:flex; align-items:center; gap:8px; padding:7px 10px 2px; color:#8f939e; font-size:10px; }
+.match-navigation button { border:1px solid #393b45; border-radius:6px; padding:4px 8px; background:#1b1d23; color:#d9f779; font-size:10px; cursor:pointer; }
+.match-navigation button:disabled { opacity:.45; cursor:default; }
+.result-snippets { display:block; }
+.result-snippets .snippet + .snippet { margin-top:5px; }
+.result-truncated { display:block; margin-top:5px; color:#8f939e; font-size:10px; }
 .option { display: inline-flex; align-items: center; gap: 6px; color: #b7bac4; font-size: 11px; cursor: pointer; user-select: none; }
 .option input { margin: 0; accent-color: #d9f779; }
 .results-area { margin-top: 19px; }

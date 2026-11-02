@@ -1,86 +1,20 @@
-# Open Text Finder
+# Open Text Finder V2
 
-**Search visible text across open Chrome tabs.** View a matching snippet and click a result to switch tabs and highlight matches.
+V2 is built from the original V1 project. The toolbar popup and its dark-and-lime styling remain in place; these are additions inside that popup.
 
-## Version 1.0.0
+## Added features
 
-- Search accessible open tabs in one go
-- Match case and whole-word options
-- Per-tab match counts and an overall total
-- Click a result to switch to its tab, scroll to the first match, and highlight matches
-- Dark, compact popup UI
-- Local-only: no accounts, analytics, or external network requests
-- MIT licensed
+- Search all open tabs, only the current window, or a manually selected set of tabs.
+- Show up to three matching text snippets per tab and navigate to previous/next occurrences (up to 500 highlights per page).
+- Save the last five search phrases locally when the user opts in; clear the list or disable history at any time.
+- Restore the last query and its options when reopening the popup after switching to a result tab.
+- Open the popup with Ctrl+Shift+F (the shortcut can be changed in `chrome://extensions/shortcuts`).
+- Right-click selected text and choose “Find across open tabs”; Chrome versions that support the action popup API open the popup with that phrase filled in. Otherwise click the extension icon to run it.
 
-## Install in Chrome
+## Load in Chrome
 
-## Install in Chrome
+1. Open `chrome://extensions` and enable Developer mode.
+2. Choose **Load unpacked** and select this folder.
+3. Click the extension toolbar icon to open the original popup.
 
-1. Open this repository on GitHub.
-2. Click the green **Code** button.
-3. Select **Download ZIP**.
-4. Once the ZIP has downloaded, extract it.
-5. Open Google Chrome and visit `chrome://extensions`.
-6. Enable **Developer mode**.
-7. Click **Load unpacked**.
-8. Select the extracted project folder that directly contains `manifest.json`.
-9. Pin Open Text Finder from Chrome's Extensions menu.
-
-**Important:** Select the folder containing `manifest.json` itself, not the ZIP file or a parent folder.
-
-For local `file://` pages, open the extension's **Details** page and enable **Allow access to file URLs**.
-
-## Usage
-
-1. Open the web pages you want to search.
-2. Click the Text Finder icon.
-3. Enter a word or phrase and click **Search**.
-4. Review counts and snippets; click a result to jump to its matching tab.
-
-## Permissions
-
-- `tabs`: identify open tabs and switch to a result.
-- `scripting`: read page text and add temporary highlights.
-- Host access for `http`, `https`, and `file` pages: needed so search can inspect more than just the active tab.
-
-The extension does not send page content or search terms to a server.
-
-## Limitations
-
-- `chrome://` pages, Chrome Web Store pages, and some protected pages cannot be searched.
-- Searches the page's visible DOM text, up to 1.5 million characters per tab.
-- Does not search text inside browser-rendered PDFs, images, closed shadow roots, or cross-origin embedded frames.
-- Highlights are temporary and may disappear after a site re-renders or the page reloads.
-- Up to 500 matches per page are highlighted on click, to avoid slowing very long pages. The reported count is based on the searchable text snapshot.
-- Whole-word matching uses JavaScript word boundaries, which may not behave ideally for every language or punctuation pattern.
-
-## Development
-
-The extension uses plain HTML, CSS, and JavaScript with Chrome Extension Manifest V3. No build step or package installation is required.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
-
-
-## Custom extension icon (v1.0.1)
-
-The `icons/` folder contains the extension icons in 16, 32, 48, and 128 pixel PNG sizes, plus the editable SVG source. The manifest uses these for the extension listing and toolbar action.
-
-To update an existing local installation, open `chrome://extensions` and click the circular **Reload** icon on Open Text Finder after replacing the old project files with these new files. To install as a separate copy, extract this ZIP and use **Load unpacked** on the extracted folder that directly contains `manifest.json`.
-
-
-## Contributing
-
-Contributions are welcome! If you find a bug, have an idea for a feature, or want to improve the documentation, feel free to contribute.
-
-1. Fork this repository.
-2. Clone your fork to your computer.
-3. Create a branch for your changes.
-4. Make your changes and test the extension in Chrome.
-5. Commit your changes and push the branch to your fork.
-6. Open a pull request against this repository and explain what you changed.
-
-Please keep pull requests focused and document any new permissions requested by the extension.
-
-By contributing, you agree that your contributions will be distributed under this project's MIT License.
+The original V1 folder remains unchanged. Searches stay local; optional search history is stored on this device.

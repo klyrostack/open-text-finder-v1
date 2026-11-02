@@ -15,7 +15,7 @@
         <h1>Text Finder</h1>
         <p>Search across your open tabs</p>
       </div>
-      <span class="version">V1</span>
+      <span class="version">V2</span>
     </header>
 
     <form id="search-form">
@@ -28,6 +28,19 @@
         <label class="option"><input type="checkbox" id="case-sensitive"> <span>Match case</span></label>
         <label class="option"><input type="checkbox" id="whole-word"> <span>Whole word</span></label>
       </div>
+      <div class="scope-row">
+        <label class="option" for="search-scope">Search scope</label>
+        <select id="search-scope"><option value="all">All open tabs</option><option value="window">Current window</option><option value="selected">Selected tabs</option></select>
+      </div>
+      <details id="tab-picker" class="tab-picker" hidden>
+        <summary>Choose tabs</summary>
+        <div id="tab-choices" class="tab-choices"></div>
+      </details>
+      <div class="history-controls">
+        <label class="option"><input type="checkbox" id="save-history"> <span>Save recent searches on this device</span></label>
+        <button type="button" id="clear-history" class="text-button">Clear</button>
+      </div>
+      <div id="recent-searches" class="recent-searches hidden"></div>
     </form>
 
     <section class="results-area" aria-live="polite" aria-busy="false">
